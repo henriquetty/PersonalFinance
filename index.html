@@ -11,7 +11,7 @@
     </head>
     <body>
         <header>
-            <div id="header">
+            <div id="container-header">
                 <div id="icon">
                     <i class="fas fa-wallet"></i>
                 </div>
@@ -21,27 +21,33 @@
                 </ul>
             </div>
         </header>
+
         <section>
             <div id="main-area">
                 <div id="title">
                     <h1>Register a new finance</h1>
                 </div>
+
                 <div id="add-finance">
                     <div id="top">
                         <div class="year">
-                            <select name="addfinance" id="year">
+                            <select>
                                 <option value="">Year</option>
-                                <option value="2018">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
                                 <option value="2018">2018</option>
-                                <option value="2018">2017</option>
-                                <option value="2018">2016</option>
-                                <option value="2018">2015</option>
-                                <option value="2018">2014</option>
-                                <option value="2018">2013</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2011">2011</option>
+                                <option value="2010">2010</option>
                             </select>
                         </div>
                         <div class="month">
-                            <select name="month" id="month">
+                            <select>
                                 <option value="">Month</option>
                                 <option value="1">January</option>
                                 <option value="2">February</option>
@@ -58,10 +64,10 @@
                             </select>
                         </div>
                         <div class="day">
-                            <input type="text" name="" id="day" placeholder="day">
+                            <input type="text" name="" id="day" placeholder="Day">
                         </div>
-                        <div class="type">
-                            <select id="type">
+                        <div class="activity">
+                            <select>
                                 <option>Activity</option>
                                 <option value="1">Food</option>
                                 <option value="2">Education</option>
@@ -74,12 +80,13 @@
                             </select>
                         </div>
                     </div>
+
                     <div id="bot">
                         <div class="description">
                             <input type="text" name="" id="description" placeholder="Description">
                         </div>
-                        <div class="value">
-                            <input type="text" name="" id="value" placeholder="Total spent">
+                        <div class="price">
+                            <input type="text" placeholder="Total spent">
                         </div>
                         <div class="button">
                             <button type="submit">
