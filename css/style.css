@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+/* global */
+
+*{
+    font-size: 16px;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* header */
+
+header{
+    background-color: #007bff;
+}
+
+#header{
+    width: 60%;
+    margin: auto;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#header ul{
+    display: flex;
+    flex-direction: row;
+}
+
+#header ul li{
+    margin-right: 25px;
+}
+
+#header ul li a {
+    font-size: 1em;
+}
+
+.fas{
+    font-size: 1.9em;
+    color: white;
+}
+
+a{
+    color: rgba(255, 255, 255, 0.500);
+}
+
+.current{
+    color: white;
+}
+
+/* main area */
+
+section{
+    width: 60%;
+    max-width: 60%;
+    margin: auto;
+}
+
+#top{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#top h1{
+    font-weight: 200;
+}
+
+/* selects */
+
+#topp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.year select, .month select{
+    width: 150px;
+    padding: 5px;
+    color: #495057;
+    border-radius: 5px;
+}
+
+.day input{
+    width: 150px;
+    padding: 7px;
+    border: 1px solid #a9a9a9;
+    border-radius: 4px;
+}
+
+.type select{
+    width: 250px;
+    padding: 5px;
+    color: #495057;
+    border-radius: 5px;
+}
+
+#bott{
+    display: flex;
+    justify-content: space-between;
+}
+
+.description input{
+    width: 400px;
+    padding: 7px;
+    border: 1px solid #a9a9a9;
+    border-radius: 4px;
+}
+
+.value input{
+    width: 250px;
+    padding: 7px;
+    border: 1px solid #a9a9a9;
+    border-radius: 4px;
+}
+
+.button button{
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.button button:hover{
+    transition: 0.2s;
+    background-color: #056fe0;
+}
