@@ -221,6 +221,15 @@ td{
         text-align: center;
     }
 
+    #title::after{
+        content: '';
+        width: 100px;
+        height: 1px;
+        background-color: #007bff;
+        display: block;
+        margin: auto;
+    }
+
     #top, #bot{
         display: flex;
         flex-direction: column;
@@ -299,7 +308,7 @@ td{
 
 @media (max-width: 300px) {
     #container-header{
-        background-color: black;
+        background-color: #007bff;
         display: flex;
         flex-direction: row;
         justify-content: center;
