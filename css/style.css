@@ -59,18 +59,19 @@ section{
     margin: auto;
 }
 
-#top{
+#title{
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
-#top h1{
+#title h1{
     font-weight: 200;
 }
 
+
 /* selects */
 
-#topp{
+#top{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -98,7 +99,7 @@ section{
     border-radius: 5px;
 }
 
-#bott{
+#bot{
     display: flex;
     justify-content: space-between;
 }
@@ -130,4 +131,88 @@ section{
 .button button:hover{
     transition: 0.2s;
     background-color: #056fe0;
+}
+
+
+/*  media query for the index */
+
+@media (max-width: 900px){
+    #header{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #title h1{
+        text-align: center;
+    }
+
+    #top, #bot{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .year select, .month select{
+        width: 300px;
+    }
+
+    .day input{
+        width: 300px;
+    }
+    
+    .type select{
+        width: 300px;
+    }
+
+    .description input, .value input{
+        margin-bottom: 3px;
+        width: 300px;
+    }
+
+    .button{
+        margin-top: 3px;
+    }
+}
+
+@media (max-width: 495px){
+    #header{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    section{
+        width: 100%;
+    }
+
+    #title h1{
+        font-size: 1.3em;
+    }
+
+    .year select, .month select{
+        width: 250px;
+        padding: 12px;
+    }
+
+    .day input{
+        width: 250px;
+        padding: 12px;
+    }
+    
+    .type select{
+        width: 250px;
+        padding: 12px;
+    }
+
+    .description input, .value input{
+        margin-bottom: 3px;
+        width: 250px;
+        padding: 12px;
+    }
+
+    .button{
+        margin-top: 10px;
+    }
 }
