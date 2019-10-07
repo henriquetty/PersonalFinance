@@ -38,7 +38,12 @@ header{
     font-size: 1em;
 }
 
-.fas{
+.fas.fa-plus, .fas.fa-search{
+    font-size: 0.8em;
+    color: white;
+}
+
+.fas.fa-wallet{
     font-size: 1.9em;
     color: white;
 }
@@ -132,9 +137,9 @@ ul li a:hover{
     border-color: #007bff;
     cursor: pointer;
     border-radius: 3px;
-    padding: 5px 8px 5px 8px;
-    text-align: center;
     box-shadow: 1px 1px 5px black;
+    width: 40px;
+    height: 40px;
 }
 
 .button button:hover{
