@@ -11,6 +11,14 @@ class Finance {
         this.description = description;
         this.totSpent = totSpent;
     }
+
+    dataValidation(){
+        for(let i in this) { //this = attrs, return index of attributes this[i]
+            if (this[i] == undefined || this[i] == '' || this[i] == null){
+                return false
+            }
+        } return true
+    }
 }
 
 class PersistLocalStorage {
@@ -57,5 +65,9 @@ function createFinance(){
         totSpent
     );
 
-    persistLocalStorage.persist(finance); //parameters to class PersistLocalStorage
+    if (finance.dataValidation()){ //returns true/false
+        persistLocalStorage.persist(finance); //parameters to class PersistLocalStorage
+    } else {
+        window.alert('Invalid');
+    }
 }
