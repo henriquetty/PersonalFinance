@@ -4,7 +4,7 @@ Web app to manage your finance, developed using vanilla JavaScript, HTML, CSS3 a
 <br><br>
 <img src="https://i.imgur.com/7FdqhVE.png"></img>
 
-<h2>Todo</h2>
+<h2>Todo ✍</h2>
 <ul>
   <li>Fix width/height of inputs for web, mobile is ok</li>
   <li>Show placeholder on input and select even when pressed</li>
