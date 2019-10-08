@@ -1,6 +1,6 @@
 //index
 
-let btnIndex = window.document.querySelector('#buttonIndex button').addEventListener('click', createFinance);
+let btnIndex = window.document.querySelector('#buttonIndex button').addEventListener('click', createFinance); //eventlistener on index.html button
 
 class Finance {
     constructor(year, month, day, activity, description, totSpent){
@@ -22,7 +22,6 @@ class Finance {
 }
 
 class PersistLocalStorage {
-
     constructor(){
         let id = localStorage.getItem('id');
         if (id === null){
@@ -44,8 +43,10 @@ class PersistLocalStorage {
 
 let persistLocalStorage = new PersistLocalStorage();
 
+//start of everything
+
 function createFinance(){
-    let inputs = {
+    let inputs = { //get inputs from HTML
         year: window.document.querySelector('#main-area .year select').value,
         month: window.document.querySelector('#main-area .month select').value,
         day: window.document.querySelector('#main-area .day input').value,
@@ -54,7 +55,7 @@ function createFinance(){
         totSpent: window.document.querySelector('#main-area .price input').value
     };
 
-    let = { year, month, day, activity, description, totSpent } = inputs;
+    let = { year, month, day, activity, description, totSpent } = inputs; //destructuring  
 
     let finance = new Finance( //parameters to class Finance
         year,
@@ -65,9 +66,10 @@ function createFinance(){
         totSpent
     );
 
+    //form validation class Finance
     if (finance.dataValidation()){ //returns true/false
-        persistLocalStorage.persist(finance); //parameters to class PersistLocalStorage
+        persistLocalStorage.persist(finance); //true persist data to localstorage
     } else {
-        window.alert('Invalid');
+        window.alert('Invalid'); //todo
     }
 }
