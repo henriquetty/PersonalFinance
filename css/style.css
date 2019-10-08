@@ -64,7 +64,7 @@ ul li a:hover{
 
 /* main area */
 
-#main-area{
+#main-area, #main-area-check{
     width: 75%;
     max-width: 75%;
     margin: 0px auto 30px auto;
@@ -131,7 +131,7 @@ ul li a:hover{
     border-radius: 4px;
 }
 
-.button button{
+#buttonIndex button, #buttonCheck button{
     color: #fff;
     background-color: #007bff;
     border-color: #007bff;
@@ -142,7 +142,7 @@ ul li a:hover{
     height: 40px;
 }
 
-.button button:hover{
+#buttonIndex button:hover, #buttonCheck button{
     transition: 0.2s;
     background-color: #056fe0;
 }
@@ -211,7 +211,7 @@ td{
 
 @media (max-width: 900px){
 
-    #main-area{
+    #main-area, #main-area-check{
         width: 100%;
         max-width: 100%;
     }
