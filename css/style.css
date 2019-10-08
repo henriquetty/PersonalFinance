@@ -38,13 +38,13 @@ header{
     font-size: 1em;
 }
 
-.fas.fa-plus, .fas.fa-search{
-    font-size: 0.8em;
+.fa-money-check-alt{
+    font-size: 1.9em;
     color: white;
 }
 
-.fas.fa-wallet{
-    font-size: 1.9em;
+.fa-plus, .fas.fa-search{
+    font-size: 0.8em;
     color: white;
 }
 
