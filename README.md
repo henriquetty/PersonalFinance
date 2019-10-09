@@ -1,6 +1,6 @@
 # <h1>Personal Finance 🧾</h1>
 
-Web app to manage your finance, developed using vanilla JavaScript, HTML, CSS3 and FontAwesome following the OOP paradigm. Mobile friendly!<br>
+Web app to manage your finance, currently being developed using Vanilla JavaScript, HTML, CSS3 and FontAwesome, following the OOP paradigm. Mobile friendly!<br>
 <br><br>
 <img src="https://i.imgur.com/7FdqhVE.png"></img>
 
@@ -12,6 +12,7 @@ Web app to manage your finance, developed using vanilla JavaScript, HTML, CSS3 a
   <li>Add a visual output to the user when the data is sucessfully added to localstorage</li>
   <li>Organize JavaScript code in multiple files</li>
 </ul>
+<hr>
 <h2>Future plans ⭐</h2>
 <ul>
   <li>Create a register/login system using Node</li>
