@@ -17,5 +17,6 @@ Web app to manage your finance, currently being developed using Vanilla JavaScri
 <ul>
   <li>Create a register/login system using Node</li>
   <li>Use MongoDB to store info for each user</li>
-  <li>Convert app to React and React native</li>
+  <li>Convert entire app to React/Vue and React native</li>
+  <li>Start accepting pull requests</li>
 </ul>
