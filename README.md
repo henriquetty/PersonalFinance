@@ -2,7 +2,7 @@
 
 Web app to manage your finance, currently being developed using Vanilla JavaScript, HTML, CSS3 and FontAwesome, following the OOP paradigm. Mobile friendly!<br>
 <br><br>
-<img src="https://i.imgur.com/lyqEg7G.png"></img>
+<img src="https://i.imgur.com/AZv3UBj.png"></img>
 
 <h2>Todo ✍</h2>
 <ul>
