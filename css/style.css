@@ -113,7 +113,6 @@ ul li a:hover{
     padding: 8px;
     border: 1px solid #a9a9a9;
     border-radius: 5px;
-    width: 100% !important;
 }
 
 /* bottom */
@@ -207,7 +206,6 @@ td{
     
     .day input{
         padding: 10px;
-        width: 100% !important;
     }
 
     .description input{
@@ -249,7 +247,7 @@ td{
     }
 
     .year, .month, .activity, .day, .description, .price{
-        width: 40%;
+        width: 280px;
         max-width: 45%;
     }
 
@@ -281,18 +279,20 @@ td{
 @media (max-width: 495px){ /* 495 px*/
     #container-header{
         width: 100%;
-        display: flex;
-        flex-direction: row;
         justify-content: space-around;
     }
 
+    #icon{
+        margin-left: 3px;
+    }
+
     #title h1{
-        font-size: 1.5em;
+        font-size: 1.7em;
     }
 
     .year, .month, .activity, .day, .description, .price{
-        width: 55%;
-        max-width: 55%;
+        width: 260px;
+        max-width: 270px;
     }
 
     .year select, .month select, .activity select, .day input{
@@ -320,42 +320,36 @@ td{
     }
 }
 
-@media (max-width: 300px) {
-    #container-header{
-        background-color: #007bff;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+@media (max-width: 325px){
+    #container-header ul li a {
+        font-size: 0.9em;
     }
 
-    #icon, #container-header ul li{
-        font-size: 0.8em;
-        margin-right: 10px;
+    #title h1{
+        font-size: 1.3em;
     }
 
-    #title{
-        font-size: 0.8em;
+    .year, .month, .activity, .day, .description, .price{
+        max-width: 220px;
     }
 
-    .year select, .month select{
-        width: 200px;
-        padding: 6px;
+    .year select, 
+    .month select, 
+    .activity select, 
+    .day input, 
+    .price input,
+    .description input{
+        width: 220px;
+        padding: 18px;
+    }
+    
+    .price input{
+        width: 220px;
     }
 
-    .day input{
-        width: 200px;
-        padding: 6px;
-    }
-
-    .activity select{
-        width: 200px;
-        padding: 6px;
-        margin-bottom: 20px;
-    }
-
-    .description input, .price input{
-        margin: 0px 0px 3px 0px;
-        width: 200px;
-        padding: 6px;
+    #finances{
+        width: 90%;
+        max-width: 90%;
+        margin: auto;
     }
 }
