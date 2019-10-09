@@ -312,12 +312,6 @@ td{
     #buttonIndex{
         margin-top: 5px;
     }
-
-    #finances{
-        width: 90%;
-        max-width: 90%;
-        margin: auto;
-    }
 }
 
 @media (max-width: 325px){
@@ -346,10 +340,8 @@ td{
     .price input{
         width: 220px;
     }
+}
 
-    #finances{
-        width: 90%;
-        max-width: 90%;
-        margin: auto;
-    }
+@media (max-width: 380px){
+    /* table needs to be responsive */
 }
