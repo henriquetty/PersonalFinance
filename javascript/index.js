@@ -70,6 +70,6 @@ function createFinance(){
     if (finance.dataValidation()){ //returns true/false
         persistLocalStorage.persist(finance); //true persist data to localstorage
     } else {
-        window.alert('Invalid'); //todo
+        window.alert('Invalid'); //false todo
     }
 }

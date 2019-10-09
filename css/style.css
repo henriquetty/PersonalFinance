@@ -7,6 +7,9 @@
     list-style-type: none;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
+}
+
+input, select{
     box-sizing: border-box;
 }
 
@@ -61,7 +64,6 @@ ul li a:hover{
 }
 
 
-
 /* main area */
 
 #main-area, #main-area-check{
@@ -79,57 +81,75 @@ ul li a:hover{
     font-weight: 300;
 }
 
-
-/* selects */
+/* Selects */
+/* Top */
 
 #top{
+    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
-.year select, .month select{
-    width: 250px;
+.year, .month, .activity{
+    width: 25%;
+    max-width: 100%;
+}
+
+.year select, .month select, .activity select, .day input{
+    width: 100%;
     padding: 7px;
     color: #495057;
     border-radius: 5px;
-    margin-right: 5px;
+}
+
+.day{
+    width: 15%;
 }
 
 .day input{
-    width: 150px;
     padding: 8px;
     border: 1px solid #a9a9a9;
-    border-radius: 4px;
-    margin-right: 5px;
-}
-
-.activity select{
-    width: 250px;
-    padding: 7px;
-    color: #495057;
     border-radius: 5px;
+    width: 100% !important;
 }
 
+/* bottom */
 #bot{
+    width: 100%;
     display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
     justify-content: space-between;
 }
 
+.description {
+    width: 50%;
+}
+
 .description input{
-    width: 470px;
+    width: 100%;
     padding: 8px;
     border: 1px solid #a9a9a9;
     border-radius: 4px;
+    box-sizing: content-box;
+}
+
+.price{
+    width: 30%;
 }
 
 .price input{
-    width: 250px;
+    width: 100%;
     padding: 8px;
     border: 1px solid #a9a9a9;
     border-radius: 4px;
+    box-sizing: content-box;
 }
+
+/* buttons */
 
 #buttonIndex button, #buttonCheck button{
     color: #fff;
@@ -176,36 +196,26 @@ td{
 
 /*  media query for the index */
 @media (max-width: 1050px){
-    #container-header{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    #title h1{
-        text-align: left;
-    }
-
-    .year select, .month select{
-        width: 180px;
-        padding: 12px;
-        margin-right: 5px;
-    }
-
-    .day input{
-        width: 130px;
-        padding: 13px;
-        margin-right: 5px;
+    .year, .month, .activity{
+        width: 25%;
+        max-width: 100%;
     }
     
-    .activity select{
-        width: 250px;
-        padding: 12px;
+    .year select, .month select, .activity select, .day input{
+        padding: 10px;
+    }
+    
+    .day input{
+        padding: 10px;
+        width: 100% !important;
     }
 
-    .description input, .price input{
-        width: 300px;
-        padding: 12px;
+    .description input{
+        padding: 10px;
+    }
+    
+    .price input{
+        padding: 10px;
     }
 }
 
@@ -217,8 +227,6 @@ td{
     }
 
     #container-header{
-        display: flex;
-        flex-direction: row;
         justify-content: center;
     }
 
@@ -236,34 +244,31 @@ td{
     }
 
     #top, #bot{
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .year select, .month select{
-        width: 300px;
-        padding: 17px;
+    .year, .month, .activity, .day, .description, .price{
+        width: 40%;
+        max-width: 45%;
     }
 
-    .day input{
-        width: 300px;
-        padding: 17px;
+    .year select, .month select, .activity select, .day input{
+        padding: 15px;
     }
     
-    .activity select{
-        width: 300px;
-        padding: 17px;
+    .description input{
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    
+    .price input{
+        padding: 15px;
+        box-sizing: border-box;
     }
 
-    .description input, .price input{
-        margin-bottom: 3px;
-        width: 300px;
-        padding: 19px;
-    }
-
-    .button{
-        margin-top: 3px;
+    #buttonIndex{
+        margin-top: 10px;
     }
 
     #finances{
@@ -273,7 +278,7 @@ td{
     }
 }
 
-@media (max-width: 495px){
+@media (max-width: 495px){ /* 495 px*/
     #container-header{
         width: 100%;
         display: flex;
@@ -285,29 +290,33 @@ td{
         font-size: 1.5em;
     }
 
-    .year select, .month select{
-        width: 250px;
-        padding: 12px;
+    .year, .month, .activity, .day, .description, .price{
+        width: 55%;
+        max-width: 55%;
     }
 
-    .day input{
-        width: 250px;
-        padding: 12px;
+    .year select, .month select, .activity select, .day input{
+        padding: 18px;
     }
     
-    .activity select{
-        width: 250px;
-        padding: 12px;
+    .description input{
+        padding: 18px;
+        box-sizing: border-box;
+    }
+    
+    .price input{
+        padding: 18px;
+        box-sizing: border-box;
     }
 
-    .description input, .price input{
-        margin-bottom: 3px;
-        width: 250px;
-        padding: 12px;
+    #buttonIndex{
+        margin-top: 5px;
     }
 
-    .button{
-        margin-top: 10px;
+    #finances{
+        width: 90%;
+        max-width: 90%;
+        margin: auto;
     }
 }
 
