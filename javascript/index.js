@@ -46,11 +46,7 @@ let persistLocalStorage = new PersistLocalStorage();
 //output successfully added/error
 
 function hideShowSpan(r){
-    if(r){
-        r = 'Finance successfully added! ✅'
-    } else {
-        r = '❌ Error, all fields are required!'
-    }
+    r ? r = 'Finance successfully added! ✅' : r = '❌ Error, all fields are required!';
 
     let span = window.document.querySelector('div#output span');
         span.classList.remove('hide');
