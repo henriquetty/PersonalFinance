@@ -115,7 +115,9 @@ ul li a:hover{
     border-radius: 5px;
 }
 
+/* Selects */
 /* bottom */
+
 #bot{
     width: 100%;
     display: flex;
@@ -167,7 +169,7 @@ ul li a:hover{
 }
 
 
-/* check finances  */
+/* check finances, table  */
 
 #finances{
     width: 75%;
@@ -192,7 +194,7 @@ td{
     text-align: left;
 }
 
-/* show output */
+/* Show output to user */
 
 #output{
     width: 75%;
@@ -211,7 +213,8 @@ td{
     font-size: 1.2em;
 }
 
-/*  media query for the index */
+/*  media querries */
+
 @media (max-width: 1050px){
     .year, .month, .activity{
         width: 25%;
