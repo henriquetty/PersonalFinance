@@ -12,12 +12,13 @@ Web app to manage your finance, currently being developed using Vanilla JavaScri
   <li>Generate years, days and months in a non verbose way</li>
   <li><strike>Add a visual output to the user when the data is sucessfully added to localstorage</strike></li>
   <li>Organize JavaScript code in multiple files</li>
+  <li>Use more Classes instead of Functions</li>
 </ul>
 <hr>
 <h2>Future plans ⭐</h2>
 <ul>
   <li>Create a register/login system using Node</li>
   <li>Use MongoDB to store info for each user</li>
-  <li>Convert entire app to React/Vue and React native</li>
+  <li>Convert entire app to React/Vue and React native/Flutter</li>
   <li>Start accepting pull requests</li>
 </ul>
