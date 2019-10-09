@@ -10,6 +10,7 @@ Web app to manage your finance, developed using vanilla JavaScript, HTML, CSS3 a
   <li>Show placeholder on input and select even when pressed</li>
   <li>Generate years, days and months in a non verbose way</li>
   <li>Add a visual output to the user when the data is sucessfully added to localstorage</li>
+  <li>Organize JavaScript code in multiple files</li>
 </ul>
 <h2>Future plans ⭐</h2>
 <ul>
