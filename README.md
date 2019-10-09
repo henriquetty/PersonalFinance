@@ -6,7 +6,8 @@ Web app to manage your finance, currently being developed using Vanilla JavaScri
 
 <h2>Todo ✍</h2>
 <ul>
-  <li>Fix width/height of inputs for web, mobile is ok</li>
+  <li><strike>Fix width/height of inputs for web, mobile is o</strike></li>
+  <li>Make the table responsive</li>
   <li>Show placeholder on input and select even when pressed</li>
   <li>Generate years, days and months in a non verbose way</li>
   <li>Add a visual output to the user when the data is sucessfully added to localstorage</li>
