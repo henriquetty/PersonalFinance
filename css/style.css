@@ -192,6 +192,24 @@ td{
     text-align: left;
 }
 
+/* show output */
+
+#output{
+    width: 75%;
+    margin: -10px auto;
+    /* border: 1px solid rebeccapurple; */
+    text-align: center;
+}
+
+.show{
+    display: inline;
+    font-size: 1.2em;
+}
+
+.hide{
+    display: none;
+    font-size: 1.2em;
+}
 
 /*  media query for the index */
 @media (max-width: 1050px){

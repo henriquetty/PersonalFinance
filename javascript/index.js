@@ -13,7 +13,7 @@ class Finance {
     }
 
     dataValidation(){
-        for(let i in this) { //this = attrs, return index of attributes this[i]
+        for(let i in this) { //this = attrs
             if (this[i] == undefined || this[i] == '' || this[i] == null){
                 return false
             }
@@ -43,6 +43,25 @@ class PersistLocalStorage {
 
 let persistLocalStorage = new PersistLocalStorage();
 
+//output successfully added/error
+
+function hideShowSpan(r){
+    if(r){
+        r = 'Finance successfully added! ✅'
+    } else {
+        r = '❌ Error, all fields are required!'
+    }
+
+    let span = window.document.querySelector('div#output span');
+        span.classList.remove('hide');
+        span.classList.add('show');
+        span.innerHTML = r;
+        setTimeout(() => {
+            span.classList.add('hide');
+        }, 2000);
+}
+
+
 //start of everything
 
 function createFinance(){
@@ -69,7 +88,8 @@ function createFinance(){
     //form validation class Finance
     if (finance.dataValidation()){ //returns true/false
         persistLocalStorage.persist(finance); //true persist data to localstorage
+        hideShowSpan(true);
     } else {
-        window.alert('Invalid'); //false todo
+        hideShowSpan(false);
     }
 }
