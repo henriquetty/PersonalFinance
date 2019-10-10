@@ -1,6 +1,9 @@
 //index
 
-let btnIndex = window.document.querySelector('#buttonIndex button').addEventListener('click', createFinance); //eventlistener on index.html button
+if (window.document.querySelector('#buttonIndex button')){
+    //eventlistener on index.html button
+    window.document.querySelector('#buttonIndex button').addEventListener('click', createFinance);
+}
 
 class Finance {
     constructor(year, month, day, activity, description, totSpent){
@@ -39,6 +42,14 @@ class PersistLocalStorage {
         localStorage.setItem(this.id, JSON.stringify(items));
         localStorage.setItem('id', this.id);
     }
+
+    getFinances(){
+        let id = localStorage.getItem('id');
+        for(let i = 1; i <= id; i++){
+            let fin = JSON.parse(localStorage.getItem(i));
+            console.log(fin);
+        }
+    }
 }
 
 let persistLocalStorage = new PersistLocalStorage();
@@ -49,12 +60,12 @@ function hideShowSpan(r){
     r ? r = 'Finance successfully added! ✅' : r = '❌ Error, all fields are required!';
 
     let span = window.document.querySelector('div#output span');
-        span.classList.remove('hide');
-        span.classList.add('show');
-        span.innerHTML = r;
-        setTimeout(() => {
-            span.classList.add('hide');
-        }, 2000);
+    span.classList.remove('hide');
+    span.classList.add('show');
+    span.innerHTML = r;
+    setTimeout(() => {
+        span.classList.add('hide');
+    }, 2000);
 }
 
 
@@ -88,4 +99,15 @@ function createFinance(){
     } else {
         hideShowSpan(false);
     }
+}
+
+
+// Finances page
+
+if(window.document.getElementById('finances-body')){
+    window.document.getElementById('finances-body').onload = showFinances();
+}
+
+function showFinances() {
+    persistLocalStorage.getFinances();
 }
