@@ -163,7 +163,7 @@ ul li a:hover{
     height: 40px;
 }
 
-#buttonIndex button:hover, #buttonCheck button{
+#buttonIndex button:hover, #buttonCheck button:hover{
     transition: 0.2s;
     background-color: #056fe0;
 }
