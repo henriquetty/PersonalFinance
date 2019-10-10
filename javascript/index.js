@@ -43,12 +43,21 @@ class PersistLocalStorage {
         localStorage.setItem('id', this.id);
     }
 
+    //show finances on page load
+
     getFinances(){
+        let array_finances = [];
         let id = localStorage.getItem('id');
+
         for(let i = 1; i <= id; i++){
             let fin = JSON.parse(localStorage.getItem(i));
-            console.log(fin);
+            if (fin === null) {
+                continue // if value null, skip.
+            }
+            array_finances.push(fin);
         }
+
+        return array_finances;
     }
 }
 
@@ -109,5 +118,40 @@ if(window.document.getElementById('finances-body')){
 }
 
 function showFinances() {
-    persistLocalStorage.getFinances();
+    let finances_array = [];
+    finances_array = persistLocalStorage.getFinances();
+    let domTbody = window.document.getElementById('finances-show');
+
+    finances_array.forEach((item) => {
+        //insert tr to tbody
+        let row = domTbody.insertRow();
+        //insert tr to row
+        row.insertCell(0).innerHTML = `${item.day}/${item.month}/${item.year}`
+        
+        //switch case for the activity
+        switch (Number.parseInt(item.activity)) {
+            case 1: item.activity = 'Food';
+                break
+            case 2: item.activity = 'Education';
+                break
+            case 3: item.activity = 'Health';
+                break
+            case 4: item.activity = 'Transportation';
+                break
+            case 5: item.activity = 'Vehicle';
+                break
+            case 6: item.activity = 'Fun';
+                break
+            case 7: item.activity = 'Travel';
+                break
+            case 8: item.activity = 'Other';
+                break
+        }
+
+        row.insertCell(1).innerHTML = `${item.activity}`
+        row.insertCell(2).innerHTML = `${item.description}`
+        row.insertCell(3).innerHTML = `${item.totSpent}`
+
+        console.log(item)
+    })
 }
