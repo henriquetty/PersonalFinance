@@ -151,7 +151,5 @@ function showFinances() {
         row.insertCell(1).innerHTML = `${item.activity}`
         row.insertCell(2).innerHTML = `${item.description}`
         row.insertCell(3).innerHTML = `${item.totSpent}`
-
-        console.log(item)
     })
 }
