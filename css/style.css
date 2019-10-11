@@ -208,6 +208,7 @@ tr{
 td{
     padding-top: 7px;
     text-align: left;
+    font-size: 1em;
 }
 
 /* Show output to user */
@@ -311,6 +312,19 @@ td{
         max-width: 90%;
         margin: auto;
     }
+
+    th{
+        border: 1px solid rgba(0, 0, 0, 0.473);
+        text-align: center;
+        padding: 2px 3px 8px 5px;
+    }
+
+    td{
+        border: 1px solid #a9a9a9;
+        text-align: center;
+        word-wrap: break-word;
+        padding: 2px 3px 8px 5px;
+    }
 }
 
 @media (max-width: 495px){ /* 495 px*/
@@ -380,5 +394,56 @@ td{
 }
 
 @media (max-width: 380px){
-    /* table needs to be responsive */
+    th{
+        font-size: 0.8em;
+        border: 1px solid rgba(0, 0, 0, 0.473);
+        text-align: center;
+        padding: 1px 3px 8px 3px;
+    }
+
+    td{
+        border: 1px solid #a9a9a9;
+        font-size: 0.7em;
+        text-align: center;
+        word-wrap: break-word;
+        padding: 1px 3px 8px 3px;
+    }
+}
+
+@media (max-width: 305px){
+    #container-header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .fa-money-check-alt{
+        position: absolute;
+        left: -9999px;
+        font-size: 0.1em;
+    }
+
+    table {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    thead, tbody{
+        margin: auto;
+    }
+
+    th{
+        font-size: 0.7em;
+    }
+
+    td{
+        font-size: 0.6em;
+    }
 }
