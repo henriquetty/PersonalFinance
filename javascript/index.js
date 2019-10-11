@@ -59,6 +59,40 @@ class PersistLocalStorage {
 
         return array_finances;
     }
+
+    //search finance
+
+    searchFinance(finance){
+        let financesFiltered = [];
+
+        financesFiltered = this.getFinances()
+        // console.log(financesFiltered)
+        // console.log(finance)
+
+        // year, month, day, activity, description
+
+        if (finance.year != ''){
+            console.log('filtro de ano')
+            financesFiltered = financesFiltered.filter(y => y.year == finance.year);
+        }
+
+        if (finance.month != ''){
+            console.log('filtro de mÊs')
+            financesFiltered = financesFiltered.filter(m => m.month == finance.month);
+        }
+
+        if (finance.day != ''){
+            console.log('filtro de dia')
+            financesFiltered = financesFiltered.filter(d => d.day == finance.day);
+        }
+
+        if (finance.activity != ''){
+            console.log('filtro de activity')
+            financesFiltered = financesFiltered.filter(a => a.activity == finance.activity);
+        }
+
+        return financesFiltered;
+    }
 }
 
 let persistLocalStorage = new PersistLocalStorage();
@@ -111,17 +145,20 @@ function createFinance(){
     }
 }
 
-
+//------------
 // Finances page
 
 if(window.document.getElementById('finances-body')){
     window.document.getElementById('finances-body').onload = showFinances();
 }
 
-function showFinances() {
-    let finances_array = [];
-    finances_array = persistLocalStorage.getFinances();
+function showFinances(finances_array = [], filter = false) { //default []
+    if(finances_array.length == 0 && filter == false) {
+        finances_array = persistLocalStorage.getFinances();
+    } 
+
     let domTbody = window.document.getElementById('finances-show');
+    domTbody.innerHTML = '';
 
     finances_array.forEach((item) => {
         //insert tr to tbody
@@ -174,5 +211,8 @@ function searchFinance() {
     let = { year, month, day, activity, description, totSpent } = inputsSearch;
     
     let searchFinance = new Finance(year, month, day, activity, description, totSpent);
-    console.log(searchFinance)
+
+    let returnFinanceSearch = persistLocalStorage.searchFinance(searchFinance);
+
+    showFinances(returnFinanceSearch, true);
 }
