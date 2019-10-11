@@ -105,6 +105,7 @@ function createFinance(){
     if (finance.dataValidation()){ //returns true/false
         persistLocalStorage.persist(finance); //true persist data to localstorage
         hideShowSpan(true);
+        year = ''
     } else {
         hideShowSpan(false);
     }
@@ -152,4 +153,26 @@ function showFinances() {
         row.insertCell(2).innerHTML = `${item.description}`
         row.insertCell(3).innerHTML = `${item.totSpent}`
     })
+}
+
+// search finance
+
+if (window.document.getElementById('buttonCheck')){
+    window.document.getElementById('buttonCheck').addEventListener('click', searchFinance);
+}
+
+function searchFinance() {
+    let inputsSearch = { //get inputs from HTML
+        year: window.document.querySelector('#main-area-check .year select').value,
+        month: window.document.querySelector('#main-area-check .month select').value,
+        day: window.document.querySelector('#main-area-check .day input').value,
+        activity: window.document.querySelector('#main-area-check .activity select').value,
+        description: window.document.querySelector('#main-area-check .description input').value,
+        totSpent: window.document.querySelector('#main-area-check .price input').value
+    };
+
+    let = { year, month, day, activity, description, totSpent } = inputsSearch;
+    
+    let searchFinance = new Finance(year, month, day, activity, description, totSpent);
+    console.log(searchFinance)
 }
