@@ -152,15 +152,31 @@ ul li a:hover{
 
 /* buttons */
 
-#buttonIndex button, #buttonCheck button{
+#buttonIndex button{
     color: #fff;
     background-color: #007bff;
     border-color: #007bff;
     cursor: pointer;
     border-radius: 3px;
     box-shadow: 1px 1px 5px black;
-    width: 40px;
+    width: 55px;
     height: 40px;
+}
+
+#buttonCheck button{
+    margin-top: 10px;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px black;
+    width: 120px;
+    height: 50px;
+}
+
+#buttonCheck{
+    margin: auto;
 }
 
 #buttonIndex button:hover, #buttonCheck button:hover{
@@ -190,7 +206,7 @@ tr{
 }
 
 td{
-    padding-top: 10px;
+    padding-top: 7px;
     text-align: left;
 }
 

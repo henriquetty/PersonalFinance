@@ -24,6 +24,7 @@ class Finance {
     }
 }
 
+
 class PersistLocalStorage {
     constructor(){
         let id = localStorage.getItem('id');
@@ -72,22 +73,18 @@ class PersistLocalStorage {
         // year, month, day, activity, description
 
         if (finance.year != ''){
-            console.log('filtro de ano')
             financesFiltered = financesFiltered.filter(y => y.year == finance.year);
         }
 
         if (finance.month != ''){
-            console.log('filtro de mÊs')
             financesFiltered = financesFiltered.filter(m => m.month == finance.month);
         }
 
         if (finance.day != ''){
-            console.log('filtro de dia')
             financesFiltered = financesFiltered.filter(d => d.day == finance.day);
         }
 
         if (finance.activity != ''){
-            console.log('filtro de activity')
             financesFiltered = financesFiltered.filter(a => a.activity == finance.activity);
         }
 
@@ -204,13 +201,11 @@ function searchFinance() {
         month: window.document.querySelector('#main-area-check .month select').value,
         day: window.document.querySelector('#main-area-check .day input').value,
         activity: window.document.querySelector('#main-area-check .activity select').value,
-        description: window.document.querySelector('#main-area-check .description input').value,
-        totSpent: window.document.querySelector('#main-area-check .price input').value
     };
 
-    let = { year, month, day, activity, description, totSpent } = inputsSearch;
+    let = { year, month, day, activity } = inputsSearch;
     
-    let searchFinance = new Finance(year, month, day, activity, description, totSpent);
+    let searchFinance = new Finance(year, month, day, activity);
 
     let returnFinanceSearch = persistLocalStorage.searchFinance(searchFinance);
 
