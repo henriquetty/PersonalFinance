@@ -184,6 +184,16 @@ ul li a:hover{
     background-color: #056fe0;
 }
 
+.btn-del{
+    color: #fff;
+    background-color: #e23c1f;
+    border-color: #e23c1f;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px black;
+    width: 45px;
+    height: 40px;
+}
 
 /* check finances, table  */
 
@@ -408,6 +418,11 @@ td{
         word-wrap: break-word;
         padding: 1px 3px 8px 3px;
     }
+
+    .btn-del{
+        width: 30px;
+        height: 30px;
+    }
 }
 
 @media (max-width: 305px){
@@ -445,7 +460,7 @@ td{
     .day input, 
     .price input,
     .description input{
-        width: 170px;
+        width: 180px;
         padding: 10px;
     }
     
@@ -468,5 +483,11 @@ td{
 
     td{
         font-size: 0.6em;
+    }
+
+    .btn-del{
+        width: 20px;
+        height: 20px;
+        border: none;
     }
 }

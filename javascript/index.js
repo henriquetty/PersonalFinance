@@ -53,6 +53,8 @@ class LocalStorageManagment { //class to save inputs/get inputs to/from localsto
             if (findItem === null) {
                 continue // if value null, skip.
             }
+
+            findItem.id = i //id for each item
             array_finances.push(findItem);
         }
 
@@ -84,9 +86,13 @@ class LocalStorageManagment { //class to save inputs/get inputs to/from localsto
 
         return financesFiltered;
     }
+
+    destroyRow(id){ //remove item from localstorage
+        localStorage.removeItem(id);
+    }
 }
 
-let persistLocalStorage = new LocalStorageManagment(); //runs once page loads
+let localStorageManagment = new LocalStorageManagment(); //runs once page loads
 
 function hideShowSpan(r){ //output successfully added/error on index.html
     r ? r = 'Finance successfully added! ✅' : r = '❌ Error, all fields are required!';
@@ -126,7 +132,7 @@ function createFinance(){
 
     //form validation class Finance
     if (finance.dataValidation()){ //returns true/false
-        persistLocalStorage.persist(finance); //true persist data to localstorage
+        localStorageManagment.persist(finance); //true persist data to localstorage
         hideShowSpan(true); //true = will show a success span 
         year = '' //i have no idea what's this
     } else {
@@ -143,16 +149,18 @@ if(window.document.getElementById('finances-body')){
 
 function showFinances(finances_array = [], filter = false) { //default []
     if(finances_array.length == 0 && filter == false) {
-        finances_array = persistLocalStorage.getFinances();
+        finances_array = localStorageManagment.getFinances();
     } 
 
     let domTbody = window.document.getElementById('finances-show');
     domTbody.innerHTML = '';
 
     finances_array.forEach((item) => {
+
         //insert tr to tbody
         let row = domTbody.insertRow();
-        //insert tr to row
+
+        //insert td to tr
         row.insertCell(0).innerHTML = `${item.day}/${item.month}/${item.year}`
         
         //switch case for the activity
@@ -178,6 +186,20 @@ function showFinances(finances_array = [], filter = false) { //default []
         row.insertCell(1).innerHTML = `${item.activity}`
         row.insertCell(2).innerHTML = `${item.description}`
         row.insertCell(3).innerHTML = `${item.totSpent}`
+
+        let btn = window.document.createElement('button');
+        btn.className = 'btn-del';
+        btn.innerHTML = '<i class="fas fa-times"</i>';
+        btn.id = `btn_id${item.id}`;
+        btn.onclick = function(){
+            let id = this.id.replace('btn_id', '');
+            localStorageManagment.destroyRow(id);
+            window.location.reload()
+        }
+
+        row.insertCell(4).append(btn);
+
+        console.log(item)
     })
 }
 
@@ -199,7 +221,7 @@ function searchFinance() {
     
     let searchFinance = new Finance(year, month, day, activity);
 
-    let returnFinanceSearch = persistLocalStorage.searchFinance(searchFinance);
+    let returnFinanceSearch = localStorageManagment.searchFinance(searchFinance);
 
     showFinances(returnFinanceSearch, true);
 }
