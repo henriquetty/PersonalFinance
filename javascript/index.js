@@ -198,8 +198,6 @@ function showFinances(finances_array = [], filter = false) { //default []
         }
 
         row.insertCell(4).append(btn);
-
-        console.log(item)
     })
 }
 
