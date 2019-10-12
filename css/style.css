@@ -420,12 +420,35 @@ td{
         margin: auto;
     }
 
+    #container-header ul li a{
+        font-size: 0.8em;
+    }
+
+    #container-header ul li{
+        width: max-content;
+    }
+
     .fa-money-check-alt{
         position: absolute;
         left: -9999px;
         font-size: 0.1em;
     }
 
+    
+    .year, .month, .activity, .day, .description, .price{
+        max-width: 170px;
+    }
+    
+    .year select, 
+    .month select, 
+    .activity select, 
+    .day input, 
+    .price input,
+    .description input{
+        width: 170px;
+        padding: 10px;
+    }
+    
     table {
         width: 100%;
         padding: 0px;
