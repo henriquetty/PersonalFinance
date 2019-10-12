@@ -1,6 +1,7 @@
 # <h1>Personal Finance 🧾</h1>
 
 Web app to manage your finance, currently being developed using Vanilla JavaScript, HTML, CSS3 and FontAwesome, following the OOP paradigm. Mobile friendly!<br>
+<p>Pull requests are welcome!</p><br>
 <br><br>
 <img src="https://i.imgur.com/AZv3UBj.png"></img>
 
@@ -22,5 +23,5 @@ Web app to manage your finance, currently being developed using Vanilla JavaScri
   <li>Create a register/login system using Node</li>
   <li>Use MongoDB to store info for each user</li>
   <li>Convert entire app to React/Vue and React native/Flutter</li>
-  <li>Start accepting pull requests</li>
+  <li><strike>Start accepting pull requests</strike></li>
 </ul>
