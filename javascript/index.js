@@ -58,7 +58,7 @@ class LocalStorageManagment { //class to manage the local storage
             array_finances.push(findItem);
         }
 
-        return array_finances; //return multiple objects inside an array to searchFinance
+        return array_finances; //return multiple objects inside an array
     }
 
     searchFinance(finance){ //search for specific finances
@@ -143,21 +143,21 @@ function createFinance(){
 //------------
 // Finances page
 
-if(window.document.getElementById('finances-body')){
+if(window.document.getElementById('finances-body')){ //verify if the current page is finances.html
     window.document.getElementById('finances-body').onload = showFinances();
 }
 
-function showFinances(finances_array = [], filter = false) { //default []
+function showFinances(finances_array = [], filter = false) { //default array length = 0 default filter = false
     if(finances_array.length == 0 && filter == false) {
-        finances_array = localStorageManagment.getFinances();
+        finances_array = localStorageManagment.getFinances(); //insert objects from getFinances to this array
     } 
 
     let domTbody = window.document.getElementById('finances-show');
-    domTbody.innerHTML = '';
+    domTbody.innerHTML = ''; //clean the tables area once you click the button search
 
     finances_array.forEach((item) => {
 
-        //insert tr to tbody
+        //insert tr to TBody
         let row = domTbody.insertRow();
 
         //insert td to tr
@@ -187,6 +187,7 @@ function showFinances(finances_array = [], filter = false) { //default []
         row.insertCell(2).innerHTML = `${item.description}`
         row.insertCell(3).innerHTML = `${item.totSpent}`
 
+        //functionality to delete from localStorage
         let btn = window.document.createElement('button');
         btn.className = 'btn-del';
         btn.innerHTML = '<i class="fas fa-times"</i>';
@@ -198,12 +199,12 @@ function showFinances(finances_array = [], filter = false) { //default []
         }
 
         row.insertCell(4).append(btn);
-    })
+    });
 }
 
 // search finance
 
-if (window.document.getElementById('buttonCheck')){
+if (window.document.getElementById('buttonCheck')){ //check if the button exists
     window.document.getElementById('buttonCheck').addEventListener('click', searchFinance);
 }
 
@@ -216,10 +217,7 @@ function searchFinance() {
     };
 
     let = { year, month, day, activity } = inputsSearch;
-    
     let searchFinance = new Finance(year, month, day, activity);
-
     let returnFinanceSearch = localStorageManagment.searchFinance(searchFinance);
-
     showFinances(returnFinanceSearch, true);
 }
