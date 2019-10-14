@@ -426,6 +426,11 @@ td{
 }
 
 @media (max-width: 305px){
+    #title h1{
+        font-size: 1em;
+        font-weight: 500;
+    }
+
     #container-header{
         width: 100%;
         display: flex;
@@ -488,6 +493,5 @@ td{
     .btn-del{
         width: 20px;
         height: 20px;
-        border: none;
     }
 }
