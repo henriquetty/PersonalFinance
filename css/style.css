@@ -185,6 +185,7 @@ ul li a:hover{
 }
 
 .btn-del{
+    text-align: center;
     color: #fff;
     background-color: #e23c1f;
     border-color: #e23c1f;
@@ -324,7 +325,6 @@ td{
     }
 
     th{
-        border: 1px solid rgba(0, 0, 0, 0.473);
         text-align: center;
         padding: 2px 3px 8px 5px;
     }
