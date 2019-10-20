@@ -3,6 +3,10 @@ class Autogen {
         this.yearSelect = window.document.querySelector('div .year select');
         this.monthSelect = window.document.querySelector('div .month select');
         this.activitiesSelect = window.document.querySelector('div .activity select');
+        window.onload = this.loadAll();
+    }
+
+    loadAll() {
         this.year();
         this.month();
         this.activities();
